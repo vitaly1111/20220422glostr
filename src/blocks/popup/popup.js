@@ -1,5 +1,5 @@
  
-	 export	const disableScroll=() => {
+	/*  export	const disableScroll=() => {
 		const widthScroll=window.innerWidth-document.body.offsetWidth;
 		document.body.scrollPosition=window.scrollY
 		document.body.style=`
@@ -59,3 +59,23 @@ export	const handlerModal=(openBtn,modal,openSelector,closeTrigger,sk) => {
 
 		})
 	}
+ */
+
+const modalButtons=[]
+modalButtons.push(document.querySelector('.modal__button'),document.querySelector('.course__button'))
+const modalForm=document.querySelector('.modal')
+
+export const modal=()=>{
+	
+ modalButtons.forEach(button => {
+	 button.addEventListener('click',() => {
+		 modalForm.style.display='flex'
+	 })
+ });
+ modalForm.addEventListener('click',(e)=>{
+	 const modalContent=e.target.closest('.modal__inner')
+	 if(!modalContent){
+		 modalForm.style.display=''
+	 }
+ })
+}
