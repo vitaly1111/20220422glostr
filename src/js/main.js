@@ -1,14 +1,16 @@
-import {asd} from './modules/func'
-import {enableScroll,disableScroll,handlerModal} from '../blocks/popup/popup'
 
-const pageOverlayModal=document.querySelector('.page__overlay_modal');
-const modalClose=document.querySelector('.modal__close');
-const presentOrderBtn=document.querySelector('.header__burger')
+//import {enableScroll,disableScroll,handlerModal} from '../blocks/popup/popup'
 
+const contents=document.querySelectorAll('.program-line__content')
 
-asd()
-//popup()
-
-handlerModal(presentOrderBtn,pageOverlayModal,'page__overlay_modal_open',modalClose,'slow')
+contents.forEach((item,i)=>{
+	const title=item.querySelector('.program-line__title')
+	const descr=item.querySelector('.program-line__descr')
+	title.addEventListener('click',()=>{
+		descr.classList.toggle('active')
+	})
+})
+/* 
+handlerModal(presentOrderBtn,pageOverlayModal,'page__overlay_modal_open',modalClose,'slow') */
 
 //# sourceMappingURL=main.js.map
