@@ -4,7 +4,7 @@ module.exports = {
 	
 	mode: 'development',
 		entry: {
-		main: './src/js/main.js'
+			main: ["regenerator-runtime/runtime.js",'./src/js/main.js']
 	},
 	output: {
 		filename: '[name].js'

@@ -3,7 +3,7 @@ const daysBlock=document.querySelector('.timer__days')
 const hoursBlock=document.querySelector('.timer__hours')
 const minutesBlock=document.querySelector('.timer__minutes')
 const secondsBlock=document.querySelector('.timer__seconds')
-const dateDedline=new Date('26 april 2022')
+const dateDedline=new Date('28 april 2022')
 let interval;
 
 const numWord=(value,words) => {
